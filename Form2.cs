@@ -6,7 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace ConnectToDB
+namespace ConnectToSqlDatabase
 {
     public partial class DatabaseConnection : Form
     {

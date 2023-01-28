@@ -1,4 +1,4 @@
-﻿namespace ConnectToDB
+﻿namespace ConnectToSqlDatabase
 {
     partial class Main
     {
@@ -151,7 +151,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Main";
-            this.Text = "MAIN";
+            this.Text = "Main Form Title";
             this.ResumeLayout(false);
             this.PerformLayout();
 

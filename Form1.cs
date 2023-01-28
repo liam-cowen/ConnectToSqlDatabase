@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ConnectToDB
+namespace ConnectToSqlDatabase
 {
     public partial class Main : Form
     {

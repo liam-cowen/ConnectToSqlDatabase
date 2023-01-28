@@ -1,4 +1,4 @@
-﻿namespace ConnectToDB
+﻿namespace ConnectToSqlDatabase
 {
     partial class DatabaseConnection
     {
