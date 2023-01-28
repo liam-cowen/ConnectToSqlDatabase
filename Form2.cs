@@ -61,12 +61,18 @@ namespace ConnectToSqlDatabase
             }
         }
 
+        //Method for retrieving version (if applicable). Change the SQL query in the Sqlcommand brackets
+        //Currently it stores the version as a number (int) - can can to string if text is needed
+        //If no version is available an error will be produced stating the database is invalid
+        //Even if there isn't a database version, this can be used to ensure the tool is connecting to a valid DB
+
+        /*
         public void currentVersion(SqlConnection con)
         {
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT DBVersion FROM TmSystem", con);
+                SqlCommand cmd = new SqlCommand("SELECT DBVersion FROM DbVersionTable", con);
 
                 int versionNumber = (Int32)cmd.ExecuteScalar();
                 _mainForm.dbVersion = versionNumber.ToString();
@@ -76,10 +82,11 @@ namespace ConnectToSqlDatabase
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Invalid TMv2 Database" + Environment.NewLine + ex.Message, "Invalid DB");
+                MessageBox.Show("Invalid Database" + Environment.NewLine + ex.Message, "Invalid DB");
                 return;
             }
         }
+        */
 
         public string sqlConnectionBuilder(string server, string database, string user, string password)
         {
@@ -125,7 +132,6 @@ namespace ConnectToSqlDatabase
             {
                 MessageBox.Show("Please enter a SQL server instance");
             }
-
             return conString;
         }
 
@@ -206,7 +212,6 @@ namespace ConnectToSqlDatabase
             if(comboDatabases.Items.Count > 0)
             {
                 comboDatabases.SelectedIndex = 0;
-
             }
         }
 
@@ -234,7 +239,6 @@ namespace ConnectToSqlDatabase
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-          
             if (verifyConnectionDetails())
             {
                 SqlConnection con = new SqlConnection(sqlConnectionString);
@@ -253,18 +257,19 @@ namespace ConnectToSqlDatabase
                     MessageBox.Show("Connection Unsuccessful!" + Environment.NewLine + Environment.NewLine + ex.Message);
                 }
             }         
-
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-
             if(verifyConnectionDetails())
             {
-
                 SqlConnection con = new SqlConnection(sqlConnectionString);              
 
-                currentVersion(con);
+                //Use with above commented out method - this will run a query to find a software/database version
+                //if this exists in the database. This updates a text element on the main form
+
+                //currentVersion(con);
+                
                 _mainForm.conWindowOpen = false;
                 _mainForm.sqlConnectionString = sqlConnectionString;
                 _mainForm.closeConnectionWindowEvent();    
@@ -273,10 +278,8 @@ namespace ConnectToSqlDatabase
                 {
                     saveToXml();
                 }
-
                 this.Close();
             }
-
         }
 
         private void DatabaseConnection_FormClosing(object sender, FormClosingEventArgs e)
@@ -296,8 +299,7 @@ namespace ConnectToSqlDatabase
                 comboSqlServers.Text = node.SelectSingleNode("server").InnerText;
                 comboDatabases.Text = node.SelectSingleNode("database").InnerText; 
                 textUser.Text = node.SelectSingleNode("user").InnerText; 
-                textPassword.Text = node.SelectSingleNode("password").InnerText; 
-                
+                textPassword.Text = node.SelectSingleNode("password").InnerText;              
             }
         }
     }

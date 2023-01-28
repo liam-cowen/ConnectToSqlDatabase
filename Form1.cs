@@ -24,7 +24,6 @@ namespace ConnectToSqlDatabase
                 labDataVersion.ForeColor = Color.Blue;
                 labDataVersion.Text = dbVersion;
             }
-
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
