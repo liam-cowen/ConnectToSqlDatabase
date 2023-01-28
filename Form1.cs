@@ -6,9 +6,9 @@ namespace ConnectToSqlDatabase
 {
     public partial class Main : Form
     {
-        public bool conWindowOpen = false;
-        public string sqlConnectionString  = string.Empty;
-        public string dbVersion = string.Empty;
+        public bool conWindowOpen = false; //true = Form2 Open / false = Form2 Closed
+        public string sqlConnectionString  = string.Empty; //use this for opening connection to the SQL server in this form
+        public string dbVersion = string.Empty; //Only used if the currentVersion() method is uncommented and setup
 
         public Main()
         {

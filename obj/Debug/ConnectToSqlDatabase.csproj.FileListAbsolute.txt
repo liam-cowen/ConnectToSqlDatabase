@@ -1,0 +1,12 @@
+C:\Repos\ConnectToSqlDatabase\obj\Debug\ConnectToSqlDatabase.csproj.AssemblyReference.cache
+C:\Repos\ConnectToSqlDatabase\obj\Debug\ConnectToSqlDatabase.csproj.SuggestedBindingRedirects.cache
+C:\Repos\ConnectToSqlDatabase\obj\Debug\ConnectToSqlDatabase.Main.resources
+C:\Repos\ConnectToSqlDatabase\obj\Debug\ConnectToSqlDatabase.DatabaseConnection.resources
+C:\Repos\ConnectToSqlDatabase\obj\Debug\ConnectToSqlDatabase.Properties.Resources.resources
+C:\Repos\ConnectToSqlDatabase\obj\Debug\ConnectToSqlDatabase.csproj.GenerateResource.cache
+C:\Repos\ConnectToSqlDatabase\obj\Debug\ConnectToSqlDatabase.csproj.CoreCompileInputs.cache
+C:\Repos\ConnectToSqlDatabase\bin\Debug\ConnectToSqlDatabase.exe.config
+C:\Repos\ConnectToSqlDatabase\bin\Debug\ConnectToSqlDatabase.exe
+C:\Repos\ConnectToSqlDatabase\bin\Debug\ConnectToSqlDatabase.pdb
+C:\Repos\ConnectToSqlDatabase\obj\Debug\ConnectToSqlDatabase.exe
+C:\Repos\ConnectToSqlDatabase\obj\Debug\ConnectToSqlDatabase.pdb
