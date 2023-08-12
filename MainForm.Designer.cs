@@ -37,15 +37,16 @@
             this.labDataStatus = new System.Windows.Forms.Label();
             this.labDataVersion = new System.Windows.Forms.Label();
             this.labVersion = new System.Windows.Forms.Label();
+            this.textBoxConnectionString = new System.Windows.Forms.TextBox();
+            this.labConnectionString = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnConnect
             // 
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnect.Location = new System.Drawing.Point(308, 146);
-            this.btnConnect.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnConnect.Location = new System.Drawing.Point(154, 76);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(150, 44);
+            this.btnConnect.Size = new System.Drawing.Size(75, 23);
             this.btnConnect.TabIndex = 0;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
@@ -55,10 +56,9 @@
             // 
             this.labTitle.AutoSize = true;
             this.labTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTitle.Location = new System.Drawing.Point(194, 17);
-            this.labTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labTitle.Location = new System.Drawing.Point(97, 9);
             this.labTitle.Name = "labTitle";
-            this.labTitle.Size = new System.Drawing.Size(158, 73);
+            this.labTitle.Size = new System.Drawing.Size(82, 37);
             this.labTitle.TabIndex = 1;
             this.labTitle.Text = "Title";
             // 
@@ -66,10 +66,9 @@
             // 
             this.labTitle2.AutoSize = true;
             this.labTitle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.labTitle2.Location = new System.Drawing.Point(202, 88);
-            this.labTitle2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labTitle2.Location = new System.Drawing.Point(101, 46);
             this.labTitle2.Name = "labTitle2";
-            this.labTitle2.Size = new System.Drawing.Size(95, 31);
+            this.labTitle2.Size = new System.Drawing.Size(54, 17);
             this.labTitle2.TabIndex = 2;
             this.labTitle2.Text = "Title 2";
             // 
@@ -78,10 +77,9 @@
             this.labConnnect.AutoSize = true;
             this.labConnnect.Cursor = System.Windows.Forms.Cursors.Default;
             this.labConnnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labConnnect.Location = new System.Drawing.Point(30, 152);
-            this.labConnnect.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labConnnect.Location = new System.Drawing.Point(15, 79);
             this.labConnnect.Name = "labConnnect";
-            this.labConnnect.Size = new System.Drawing.Size(252, 30);
+            this.labConnnect.Size = new System.Drawing.Size(133, 16);
             this.labConnnect.TabIndex = 3;
             this.labConnnect.Text = "Connect to Database";
             // 
@@ -90,10 +88,9 @@
             this.labStatus.AutoSize = true;
             this.labStatus.Cursor = System.Windows.Forms.Cursors.Default;
             this.labStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labStatus.Location = new System.Drawing.Point(30, 204);
-            this.labStatus.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labStatus.Location = new System.Drawing.Point(15, 106);
             this.labStatus.Name = "labStatus";
-            this.labStatus.Size = new System.Drawing.Size(92, 30);
+            this.labStatus.Size = new System.Drawing.Size(47, 16);
             this.labStatus.TabIndex = 4;
             this.labStatus.Text = "Status:";
             // 
@@ -103,10 +100,9 @@
             this.labDataStatus.Cursor = System.Windows.Forms.Cursors.Default;
             this.labDataStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDataStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labDataStatus.Location = new System.Drawing.Point(136, 204);
-            this.labDataStatus.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labDataStatus.Location = new System.Drawing.Point(68, 106);
             this.labDataStatus.Name = "labDataStatus";
-            this.labDataStatus.Size = new System.Drawing.Size(187, 29);
+            this.labDataStatus.Size = new System.Drawing.Size(101, 15);
             this.labDataStatus.TabIndex = 5;
             this.labDataStatus.Text = "Not Connected";
             // 
@@ -115,10 +111,9 @@
             this.labDataVersion.AutoSize = true;
             this.labDataVersion.Cursor = System.Windows.Forms.Cursors.Default;
             this.labDataVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labDataVersion.Location = new System.Drawing.Point(654, 204);
-            this.labDataVersion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labDataVersion.Location = new System.Drawing.Point(327, 106);
             this.labDataVersion.Name = "labDataVersion";
-            this.labDataVersion.Size = new System.Drawing.Size(22, 29);
+            this.labDataVersion.Size = new System.Drawing.Size(12, 15);
             this.labDataVersion.TabIndex = 7;
             this.labDataVersion.Text = "-";
             // 
@@ -127,18 +122,37 @@
             this.labVersion.AutoSize = true;
             this.labVersion.Cursor = System.Windows.Forms.Cursors.Default;
             this.labVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labVersion.Location = new System.Drawing.Point(548, 204);
-            this.labVersion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labVersion.Location = new System.Drawing.Point(274, 106);
             this.labVersion.Name = "labVersion";
-            this.labVersion.Size = new System.Drawing.Size(107, 30);
+            this.labVersion.Size = new System.Drawing.Size(56, 16);
             this.labVersion.TabIndex = 6;
             this.labVersion.Text = "Version:";
             // 
+            // textBoxConnectionString
+            // 
+            this.textBoxConnectionString.Location = new System.Drawing.Point(29, 181);
+            this.textBoxConnectionString.Multiline = true;
+            this.textBoxConnectionString.Name = "textBoxConnectionString";
+            this.textBoxConnectionString.Size = new System.Drawing.Size(301, 166);
+            this.textBoxConnectionString.TabIndex = 8;
+            // 
+            // labConnectionString
+            // 
+            this.labConnectionString.AutoSize = true;
+            this.labConnectionString.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labConnectionString.Location = new System.Drawing.Point(22, 154);
+            this.labConnectionString.Name = "labConnectionString";
+            this.labConnectionString.Size = new System.Drawing.Size(124, 17);
+            this.labConnectionString.TabIndex = 9;
+            this.labConnectionString.Text = "Connection String:";
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 1306);
+            this.ClientSize = new System.Drawing.Size(440, 679);
+            this.Controls.Add(this.labConnectionString);
+            this.Controls.Add(this.textBoxConnectionString);
             this.Controls.Add(this.labDataVersion);
             this.Controls.Add(this.labVersion);
             this.Controls.Add(this.labDataStatus);
@@ -149,7 +163,6 @@
             this.Controls.Add(this.btnConnect);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Main";
             this.Text = "Main Form Title";
             this.ResumeLayout(false);
@@ -167,6 +180,8 @@
         private System.Windows.Forms.Label labDataStatus;
         private System.Windows.Forms.Label labDataVersion;
         private System.Windows.Forms.Label labVersion;
+        private System.Windows.Forms.TextBox textBoxConnectionString;
+        private System.Windows.Forms.Label labConnectionString;
     }
 }
 
